@@ -90,7 +90,6 @@ export default function AboutSection() {
       skills: [
         { name: 'Python', icon: <FaPython className="w-8 h-8 sm:w-10 sm:h-10 text-[#3776AB]" /> },
         { name: 'Java', icon: <FaJava className="w-8 h-8 sm:w-10 sm:h-10 text-[#EA2D2E]" /> },
-        { name: 'Go', icon: <SiGo className="w-8 h-8 sm:w-10 sm:h-10 text-[#00ADD8]" /> },
         { name: 'C', icon: <SiC className="w-8 h-8 sm:w-10 sm:h-10 text-[#659AD2]" /> },
         { name: 'C++', icon: <SiCplusplus className="w-8 h-8 sm:w-10 sm:h-10 text-[#00599C]" /> },
         { name: 'JavaScript', icon: <IoLogoJavascript className="w-8 h-8 sm:w-10 sm:h-10 text-[#F7DF1E]" /> },
@@ -114,7 +113,6 @@ export default function AboutSection() {
       skills: [
         { name: 'Node.js', icon: <FaNodeJs className="w-8 h-8 sm:w-10 sm:h-10 text-[#339933]" /> },
         { name: 'Express', icon: <SiExpress className="w-8 h-8 sm:w-10 sm:h-10 text-[#141413] dark:text-white" /> },
-        { name: 'FastAPI', icon: <SiFastapi className="w-8 h-8 sm:w-10 sm:h-10 text-[#009688]" /> },
         { name: 'Django', icon: <SiDjango className="w-8 h-8 sm:w-10 sm:h-10 text-[#092E20] dark:text-[#44B78B]" /> },
         { name: 'LangChain', icon: <SiLangchain className="w-8 h-8 sm:w-10 sm:h-10 text-[#1C3C3C] dark:text-[#D4AF37]" /> },
         { name: 'Ollama', icon: <SiOllama className="w-8 h-8 sm:w-10 sm:h-10 text-[#141413] dark:text-white" /> },
@@ -126,8 +124,6 @@ export default function AboutSection() {
         { name: 'PostgreSQL', icon: <SiPostgresql className="w-8 h-8 sm:w-10 sm:h-10 text-[#4169E1]" /> },
         { name: 'MongoDB', icon: <SiMongodb className="w-8 h-8 sm:w-10 sm:h-10 text-[#47A248]" /> },
         { name: 'Supabase', icon: <RiSupabaseFill className="w-8 h-8 sm:w-10 sm:h-10 text-[#3ECF8E]" /> },
-        { name: 'Neo4j Aura', icon: <SiNeo4J className="w-8 h-8 sm:w-10 sm:h-10 text-[#008CC1]" /> },
-        { name: 'Redis', icon: <SiRedis className="w-8 h-8 sm:w-10 sm:h-10 text-[#DC382D]" /> },
       ],
     },
     {
@@ -139,7 +135,6 @@ export default function AboutSection() {
         { name: 'Vercel', icon: <SiVercel className="w-8 h-8 sm:w-10 sm:h-10 text-[#141413] dark:text-white" /> },
         { name: 'Render', icon: <SiRender className="w-8 h-8 sm:w-10 sm:h-10 text-[#46E3B7]" /> },
         { name: 'Kafka', icon: <SiApachekafka className="w-8 h-8 sm:w-10 sm:h-10 text-[#231F20] dark:text-white" /> },
-        { name: 'DigitalOcean', icon: <SiDigitalocean className="w-8 h-8 sm:w-10 sm:h-10 text-[#0080FF]" /> },
       ],
     },
     {
