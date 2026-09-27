@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --gold-primary: #D4AF37;
@@ -9,22 +11,67 @@
     --gold-border: rgba(212, 175, 55, 0.25);
     --gold-glow: rgba(212, 175, 55, 0.15);
     --bg-main: #FDFDFB;
+    --bg-card: #FFFFFF;
+    --bg-subtle: #FBF9F2;
     --text-primary: #141413;
     --text-secondary: #575752;
     --text-muted: #8C8C85;
+  }
+
+  .dark {
+    --gold-primary: #E5C158;
+    --gold-light: #F8E8B0;
+    --gold-dark: #F3E5AB;
+    --gold-accent: #D4AF37;
+    --gold-border: rgba(212, 175, 55, 0.35);
+    --gold-glow: rgba(212, 175, 55, 0.25);
+    --bg-main: #0A0A09;
+    --bg-card: #141412;
+    --bg-subtle: #1C1C18;
+    --text-primary: #F5F5F0;
+    --text-secondary: #C5C5BC;
+    --text-muted: #8E8E85;
   }
 
   html {
     scroll-behavior: smooth;
     background-color: var(--bg-main);
     color: var(--text-primary);
-    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    background-color: rgba(212, 175, 55, 0.25);
-    color: #141413;
+    background-color: rgba(212, 175, 55, 0.3);
+    color: var(--text-primary);
   }
+
+  /* Default luxury serif headings */
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Luxury Typography System */
+.font-luxury-serif {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-editorial-serif {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-luxury-roman {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.18em;
+}
+
+.font-luxury-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Elegant Cursive Font Class */
@@ -81,12 +128,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8F8F5;
+  background: var(--bg-main);
 }
 
 ::-webkit-scrollbar-thumb {
   background: #E2D4A8;
   border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #473B1B;
 }
 
 ::-webkit-scrollbar-thumb:hover {

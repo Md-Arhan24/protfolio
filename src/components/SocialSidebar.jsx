@@ -44,7 +44,7 @@ export default function SocialSidebar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.name}
-              className="text-[#6B6B65] hover:text-[#D4AF37] hover:-translate-y-1 transition-all duration-200 p-2 rounded-lg hover:bg-[#D4AF37]/10"
+              className="text-[#6B6B65] dark:text-[#A8A8A0] hover:text-[#D4AF37] dark:hover:text-[#F3E5AB] hover:-translate-y-1 transition-all duration-200 p-2 rounded-lg hover:bg-[#D4AF37]/10"
             >
               {social.icon}
             </a>
@@ -63,7 +63,7 @@ export default function SocialSidebar() {
       >
         <a
           href="mailto:arhanmohammed001@gmail.com"
-          className="text-xs font-mono tracking-widest text-[#6B6B65] hover:text-[#D4AF37] hover:-translate-y-1 transition-all duration-200 py-2 [writing-mode:vertical-rl]"
+          className="text-xs font-mono tracking-widest text-[#6B6B65] dark:text-[#A8A8A0] hover:text-[#D4AF37] dark:hover:text-[#F3E5AB] hover:-translate-y-1 transition-all duration-200 py-2 [writing-mode:vertical-rl]"
         >
           arhanmohammed001@gmail.com
         </a>

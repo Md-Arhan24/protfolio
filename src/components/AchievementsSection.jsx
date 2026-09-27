@@ -65,13 +65,13 @@ export default function AchievementsSection() {
     <section id="achievements" className="py-24 px-6 sm:px-8 max-w-6xl mx-auto scroll-mt-20">
       {/* Section Header */}
       <div className="flex items-center gap-4 mb-4">
-        <span className="font-mono text-base text-[#D4AF37] font-semibold">04.</span>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#141413]">
+        <span className="font-display text-sm text-[#D4AF37] font-semibold tracking-widest">04.</span>
+        <h2 className="font-luxury-serif text-3xl sm:text-5xl font-normal tracking-tight text-[#141413] dark:text-[#F7F7F2]">
           Honors & Achievements
         </h2>
         <div className="flex-1 h-[1px] bg-gradient-to-r from-[#D4AF37]/50 via-[#D4AF37]/20 to-transparent max-w-md ml-4" />
       </div>
-      <p className="text-[#686861] text-base mb-12 max-w-xl">
+      <p className="text-[#686861] dark:text-[#A8A89F] text-base mb-12 max-w-xl leading-relaxed">
         Milestones that reflect rigorous problem-solving discipline, continuous skill acquisition, and technical commitment.
       </p>
 
@@ -85,7 +85,7 @@ export default function AchievementsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -5 }}
-            className="flex flex-col justify-between p-8 rounded-3xl bg-white border border-[#D4AF37]/35 shadow-[0_4px_25px_rgba(212,175,55,0.08)] hover:shadow-[0_12px_35px_rgba(212,175,55,0.22)] hover:border-[#D4AF37] transition-all duration-300 relative overflow-hidden group"
+            className="flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#141412] border border-[#D4AF37]/35 dark:border-[#D4AF37]/40 shadow-[0_4px_25px_rgba(212,175,55,0.08)] dark:shadow-[0_4px_25px_rgba(212,175,55,0.15)] hover:shadow-[0_12px_35px_rgba(212,175,55,0.22)] hover:border-[#D4AF37] transition-all duration-300 relative overflow-hidden group"
           >
             {/* Top gold accent line */}
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#996515] via-[#D4AF37] to-[#AA771C]" />
@@ -93,29 +93,29 @@ export default function AchievementsSection() {
             <div>
               {/* Header Icon & Tag */}
               <div className="flex items-center justify-between gap-4 mb-6">
-                <div className="p-3 rounded-2xl bg-[#FFFDF7] border border-[#D4AF37]/40 shadow-xs group-hover:scale-110 transition-transform">
+                <div className="p-3 rounded-2xl bg-[#FFFDF7] dark:bg-[#1C1C18] border border-[#D4AF37]/40 shadow-xs group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
-                <span className="text-[11px] font-mono uppercase tracking-wider text-[#996515] font-semibold bg-[#D4AF37]/15 px-3 py-1 rounded-full">
+                <span className="font-display text-[10px] uppercase tracking-[0.2em] text-[#996515] dark:text-[#F3E5AB] font-semibold bg-[#D4AF37]/15 px-3 py-1 rounded-full">
                   {item.badge}
                 </span>
               </div>
 
               {/* Big Stat Display */}
               <div className="mb-2">
-                <span className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#996515] via-[#D4AF37] to-[#AA771C]">
+                <span className="font-luxury-serif text-5xl sm:text-6xl font-normal tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#996515] via-[#D4AF37] to-[#AA771C] dark:from-[#F3E5AB] dark:via-[#D4AF37] dark:to-[#E5C158]">
                   {item.bigStat}
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-[#141413] mb-3">
+              <h3 className="font-luxury-serif text-xl sm:text-2xl font-medium text-[#141413] dark:text-[#F7F7F2] mb-3">
                 {item.statLabel}
               </h3>
-              <p className="text-xs sm:text-sm text-[#5B5B54] leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-[#5B5B54] dark:text-[#A8A8A0] leading-relaxed mb-6">
                 {item.description}
               </p>
 
               {/* Mini Stats Breakdown */}
-              <div className="grid grid-cols-3 gap-2 py-3 px-3.5 rounded-xl bg-[#FBF9F2] border border-[#D4AF37]/20 mb-6 text-center">
+              <div className="grid grid-cols-3 gap-2 py-3 px-3.5 rounded-xl bg-[#FBF9F2] dark:bg-[#1C1C18] border border-[#D4AF37]/20 dark:border-[#D4AF37]/30 mb-6 text-center">
                 {item.statsBreakdown.map((s, sIdx) => (
                   <div key={sIdx} className="flex flex-col">
                     <span
@@ -124,19 +124,19 @@ export default function AchievementsSection() {
                     >
                       {s.count}
                     </span>
-                    <span className="text-[10px] text-[#7A7A73]">{s.label}</span>
+                    <span className="text-[10px] text-[#7A7A73] dark:text-[#8E8E85]">{s.label}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Action Link */}
-            <div className="pt-2 border-t border-neutral-100 flex items-center justify-between">
+            <div className="pt-2 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between">
               <a
                 href={item.linkUrl}
                 target={item.linkUrl.startsWith('http') ? '_blank' : '_self'}
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#996515] hover:text-[#141413] transition-colors group-hover:underline underline-offset-4"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#996515] dark:text-[#F3E5AB] hover:text-[#141413] dark:hover:text-white transition-colors group-hover:underline underline-offset-4"
               >
                 <span>{item.linkText}</span>
                 <ExternalLink className="w-3.5 h-3.5" />

@@ -1,11 +1,11 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import { GithubIcon } from "./Icons";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 
 export const ShowProject = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const projects = [
     {
       id: "video-platform",
@@ -85,24 +85,27 @@ export const ShowProject = () => {
     >
       {/* Section Heading */}
       <div className="flex items-center gap-4 mb-4">
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#141413]">
+        <h2 className="font-luxury-serif text-3xl sm:text-5xl font-normal tracking-tight text-[#141413] dark:text-[#F7F7F2]">
           Featured Projects
         </h2>
 
         <div className="flex-1 h-[1px] bg-gradient-to-r from-[#D4AF37]/50 via-[#D4AF37]/20 to-transparent max-w-md ml-4" />
       </div>
-      <div className="flex align">
-        <p className="text-[#686861] text-base mb-14 max-w-2xl">
-        A selection of production-grade systems engineered with a strong
-        emphasis on performance, scalability, and clean architecture.
-      </p>
-      <a 
-        onClick={() => navigate('/projects')}
-        className="relative inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-[#996515] via-[#C9A227] to-[#AA771C] rounded-lg shadow-[0_4px_20px_rgba(212,175,55,0.35)] hover:shadow-[0_6px_25px_rgba(212,175,55,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group overflow-hidden"
-      >
-        <span className="absolute inset-0 w-full h-full bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out" />
-        <span>All Projects</span>
-      </a>
+
+      {/* Responsive Header Row with Paragraph & All Projects Button */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-12">
+        <p className="text-[#686861] dark:text-[#A8A89F] text-base max-w-2xl leading-relaxed">
+          A selection of production-grade systems engineered with a strong
+          emphasis on performance, scalability, and clean architecture.
+        </p>
+        <button 
+          onClick={() => navigate('/projects')}
+          className="self-start sm:self-auto cursor-pointer relative inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-[#996515] via-[#C9A227] to-[#AA771C] rounded-lg shadow-[0_4px_20px_rgba(212,175,55,0.35)] hover:shadow-[0_6px_25px_rgba(212,175,55,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group overflow-hidden whitespace-nowrap"
+        >
+          <span className="absolute inset-0 w-full h-full bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out" />
+          <span>All Projects</span>
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </button>
       </div>
 
       {/* Projects Grid: 2x2 */}
@@ -110,7 +113,7 @@ export const ShowProject = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="group flex flex-col rounded-2xl bg-white border border-[#D4AF37]/30 shadow-[0_4px_25px_rgba(212,175,55,0.06)] hover:shadow-[0_16px_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37] transition-all duration-300 overflow-hidden"
+            className="group flex flex-col rounded-2xl bg-white dark:bg-[#141412] border border-[#D4AF37]/30 dark:border-[#D4AF37]/40 shadow-[0_4px_25px_rgba(212,175,55,0.06)] dark:shadow-[0_4px_25px_rgba(212,175,55,0.15)] hover:shadow-[0_16px_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37] transition-all duration-300 overflow-hidden"
           >
             {/* Image */}
             <div className="relative w-full aspect-video overflow-hidden bg-[#141413]">
@@ -119,28 +122,28 @@ export const ShowProject = () => {
                 alt={project.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#141413]/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#141413]/70 via-transparent to-transparent" />
             </div>
 
             {/* Content */}
             <div className="flex flex-col flex-1 p-6 sm:p-7">
               {/* Category */}
-              <span className="text-xs font-mono uppercase tracking-widest text-[#996515] font-semibold mb-2">
+              <span className="font-display text-xs uppercase tracking-[0.25em] text-[#996515] dark:text-[#E5C158] font-semibold mb-2">
                 {project.category}
               </span>
 
               {/* Title */}
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#141413] tracking-tight mb-2 group-hover:text-[#996515] transition-colors">
+              <h3 className="font-luxury-serif text-2xl sm:text-3xl font-medium text-[#141413] dark:text-[#F7F7F2] tracking-tight mb-2 group-hover:text-[#996515] dark:group-hover:text-[#F3E5AB] transition-colors">
                 {project.title}
               </h3>
 
               {/* Tagline */}
-              <p className="text-sm font-semibold text-[#806B33] mb-3">
+              <p className="font-luxury-serif italic text-base sm:text-lg font-normal text-[#806B33] dark:text-[#D4AF37] mb-3">
                 {project.tagline}
               </p>
 
               {/* Description */}
-              <p className="text-sm text-[#52524B] leading-relaxed mb-5 flex-1">
+              <p className="text-sm text-[#52524B] dark:text-[#A8A89F] leading-relaxed mb-5 flex-1">
                 {project.description}
               </p>
 
@@ -149,7 +152,7 @@ export const ShowProject = () => {
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="px-2.5 py-1 rounded-md bg-[#FBF9F2] border border-[#D4AF37]/30 text-xs font-mono font-medium text-[#4D4D46]"
+                    className="px-2.5 py-1 rounded-md bg-[#FBF9F2] dark:bg-[#1C1C18] border border-[#D4AF37]/30 dark:border-[#D4AF37]/40 text-xs font-mono font-medium text-[#4D4D46] dark:text-[#D1D1C7]"
                   >
                     {t}
                   </span>
@@ -157,14 +160,14 @@ export const ShowProject = () => {
               </div>
 
               {/* Action Links */}
-              <div className="flex items-center gap-3 pt-2 border-t border-[#D4AF37]/15 -mx-1 px-1">
+              <div className="flex items-center gap-3 pt-2 border-t border-[#D4AF37]/15 dark:border-[#D4AF37]/25 -mx-1 px-1">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-semibold text-[#141413] hover:text-[#996515] transition-colors py-1.5 px-3 rounded-lg border border-neutral-200 hover:border-[#D4AF37] bg-white shadow-xs mt-4"
+                  className="inline-flex items-center gap-2 text-xs font-semibold text-[#141413] dark:text-[#F5F5F0] hover:text-[#996515] dark:hover:text-[#F3E5AB] transition-colors py-1.5 px-3 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:border-[#D4AF37] bg-white dark:bg-[#1A1A17] shadow-xs mt-4"
                 >
-                  <GithubIcon className="w-4 h-4 text-[#996515]" />
+                  <GithubIcon className="w-4 h-4 text-[#996515] dark:text-[#E5C158]" />
                   <span>Code</span>
                 </a>
 

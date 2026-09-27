@@ -190,15 +190,26 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-24 px-6 sm:px-8 max-w-6xl mx-auto scroll-mt-20">
+    <section id="projects" className="py-16 sm:py-24 px-6 sm:px-8 max-w-6xl mx-auto scroll-mt-20">
+      {/* Top Navigation Back to Portfolio */}
+      <div className="mb-8">
+        <a
+          href="/"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#996515] dark:text-[#F3E5AB] hover:text-[#141413] dark:hover:text-white transition-colors group px-4 py-2 rounded-xl bg-white dark:bg-[#141412] border border-[#D4AF37]/30 shadow-xs"
+        >
+          <span className="text-base group-hover:-translate-x-1 transition-transform">←</span>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+
       {/* Section Heading */}
       <div className="flex items-center gap-4 mb-4">
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#141413]">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#141413] dark:text-[#F5F5F0]">
           All Projects
         </h2>
         <div className="flex-1 h-[1px] bg-gradient-to-r from-[#D4AF37]/50 via-[#D4AF37]/20 to-transparent max-w-md ml-4" />
       </div>
-      <p className="text-[#686861] text-base mb-14 max-w-2xl">
+      <p className="text-[#686861] dark:text-[#A8A89F] text-base mb-14 max-w-2xl leading-relaxed">
         A selection of production-grade systems engineered with a strong emphasis on performance, scalability, and clean architecture.
       </p>
 
@@ -216,7 +227,7 @@ export default function ProjectsSection() {
               transition={{ duration: 0.6 }}
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
-              className="group relative rounded-3xl bg-white border border-[#D4AF37]/30 shadow-[0_4px_25px_rgba(212,175,55,0.06)] hover:shadow-[0_16px_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37] transition-all duration-300 overflow-hidden"
+              className="group relative rounded-3xl bg-white dark:bg-[#141412] border border-[#D4AF37]/30 dark:border-[#D4AF37]/40 shadow-[0_4px_25px_rgba(212,175,55,0.06)] dark:shadow-[0_4px_25px_rgba(212,175,55,0.15)] hover:shadow-[0_16px_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37] transition-all duration-300 overflow-hidden"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 items-center">
                 {/* Media Preview Slot */}
@@ -334,31 +345,31 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#141413] tracking-tight mb-2 group-hover:text-[#996515] transition-colors">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#141413] dark:text-[#F5F5F0] tracking-tight mb-2 group-hover:text-[#996515] dark:group-hover:text-[#F3E5AB] transition-colors">
                     {project.title}
                   </h3>
 
                   {/* Tagline */}
-                  <p className="text-sm font-semibold text-[#806B33] mb-4">
+                  <p className="text-sm font-semibold text-[#806B33] dark:text-[#D4AF37] mb-4">
                     {project.tagline}
                   </p>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base text-[#52524B] leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base text-[#52524B] dark:text-[#A8A8A0] leading-relaxed mb-6">
                     {project.description}
                   </p>
 
                   {/* Key Impact Metrics Grid */}
-                  <div className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-[#FBF9F2] border border-[#D4AF37]/25">
+                  <div className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-[#FBF9F2] dark:bg-[#1C1C18] border border-[#D4AF37]/25 dark:border-[#D4AF37]/35">
                     {project.metrics.map((metric, mIdx) => (
                       <div key={mIdx} className="flex flex-col">
-                        <span className="text-base sm:text-lg font-extrabold text-[#141413] flex items-center gap-1">
-                          <span className="text-[#996515]">{metric.value}</span>
+                        <span className="text-base sm:text-lg font-extrabold text-[#141413] dark:text-[#F5F5F0] flex items-center gap-1">
+                          <span className="text-[#996515] dark:text-[#E5C158]">{metric.value}</span>
                         </span>
-                        <span className="text-xs font-semibold text-[#4E4E47]">
+                        <span className="text-xs font-semibold text-[#4E4E47] dark:text-[#D1D1C7]">
                           {metric.label}
                         </span>
-                        <span className="text-[10px] text-[#7C7C75]">
+                        <span className="text-[10px] text-[#7C7C75] dark:text-[#8E8E85]">
                           {metric.detail}
                         </span>
                       </div>
@@ -370,7 +381,7 @@ export default function ProjectsSection() {
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="px-2.5 py-1 rounded-md bg-white border border-[#D4AF37]/30 text-xs font-mono font-medium text-[#4D4D46]"
+                        className="px-2.5 py-1 rounded-md bg-white dark:bg-[#1E1E1A] border border-[#D4AF37]/30 dark:border-[#D4AF37]/40 text-xs font-mono font-medium text-[#4D4D46] dark:text-[#D1D1C7]"
                       >
                         {t}
                       </span>
@@ -383,9 +394,9 @@ export default function ProjectsSection() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#141413] hover:text-[#996515] transition-colors py-1.5 px-3 rounded-lg border border-neutral-200 hover:border-[#D4AF37] bg-white shadow-xs"
+                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#141413] dark:text-[#F5F5F0] hover:text-[#996515] dark:hover:text-[#F3E5AB] transition-colors py-1.5 px-3 rounded-lg border border-neutral-200 dark:border-neutral-700 hover:border-[#D4AF37] bg-white dark:bg-[#1A1A17] shadow-xs"
                     >
-                      <GithubIcon className="w-4 h-4 text-[#996515]" />
+                      <GithubIcon className="w-4 h-4 text-[#996515] dark:text-[#E5C158]" />
                       <span>Source Code</span>
                     </a>
 

@@ -50,10 +50,10 @@ export default function ResumeModal({ isOpen, onClose }) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-3xl bg-[#FDFDFB] rounded-3xl border border-[#D4AF37]/50 shadow-2xl overflow-hidden z-10 my-8 max-h-[90vh] flex flex-col"
+            className="relative w-full max-w-3xl bg-[#FDFDFB] dark:bg-[#121210] rounded-3xl border border-[#D4AF37]/50 shadow-2xl overflow-hidden z-10 my-8 max-h-[90vh] flex flex-col"
           >
             {/* Header */}
-            <div className="p-6 bg-gradient-to-r from-[#141413] via-[#22221E] to-[#141413] text-white flex items-center justify-between border-b border-[#D4AF37]/30">
+            <div className="p-6 bg-gradient-to-r from-[#141413] via-[#22221E] to-[#141413] dark:from-[#080807] dark:via-[#141412] dark:to-[#080807] text-white flex items-center justify-between border-b border-[#D4AF37]/30">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
                   <FileDown className="w-5 h-5" />
@@ -89,41 +89,41 @@ export default function ResumeModal({ isOpen, onClose }) {
             </div>
 
             {/* Scrollable Content Body */}
-            <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm text-[#4A4A43]">
+            <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm text-[#4A4A43] dark:text-[#C5C5BC]">
               {/* Top Contact Strip */}
-              <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[#F8F6ED] border border-[#D4AF37]/25 text-xs">
+              <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[#F8F6ED] dark:bg-[#1C1C18] border border-[#D4AF37]/25 text-xs text-[#141413] dark:text-[#E8E6DF]">
                 <span>📍 Hyderabad, India</span>
-                <span className="text-[#996515] font-mono">arhanmohammed001@gmail.com</span>
+                <span className="text-[#996515] dark:text-[#F3E5AB] font-mono">arhanmohammed001@gmail.com</span>
                 <span>+91 7799859383</span>
-                <span className="text-[#996515] font-mono">github.com/Md-Arhan24</span>
+                <span className="text-[#996515] dark:text-[#F3E5AB] font-mono">github.com/Md-Arhan24</span>
               </div>
 
               {/* Education */}
               <div>
-                <h4 className="text-xs font-mono uppercase tracking-widest text-[#996515] font-bold mb-3 flex items-center gap-2">
+                <h4 className="text-xs font-mono uppercase tracking-widest text-[#996515] dark:text-[#E5C158] font-bold mb-3 flex items-center gap-2">
                   <GraduationCap className="w-4 h-4 text-[#D4AF37]" />
                   <span>Education</span>
                 </h4>
                 <div className="space-y-3">
-                  <div className="p-4 rounded-xl bg-white border border-neutral-200">
+                  <div className="p-4 rounded-xl bg-white dark:bg-[#181815] border border-neutral-200 dark:border-neutral-800">
                     <div className="flex justify-between items-start">
                       <div>
-                        <strong className="text-[#141413]">GRIET, Hyderabad</strong>
-                        <p className="text-xs text-neutral-600">B.Tech in Computer Science and Engineering</p>
+                        <strong className="text-[#141413] dark:text-[#F5F5F0]">GRIET, Hyderabad</strong>
+                        <p className="text-xs text-neutral-600 dark:text-neutral-400">B.Tech in Computer Science and Engineering</p>
                       </div>
-                      <span className="text-xs font-bold text-[#996515] bg-[#D4AF37]/15 px-2.5 py-1 rounded-full">
+                      <span className="text-xs font-bold text-[#996515] dark:text-[#F3E5AB] bg-[#D4AF37]/15 px-2.5 py-1 rounded-full">
                         CGPA 9.1 / 10 • Exp. Jul 2028
                       </span>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-white border border-neutral-200">
+                  <div className="p-4 rounded-xl bg-white dark:bg-[#181815] border border-neutral-200 dark:border-neutral-800">
                     <div className="flex justify-between items-start">
                       <div>
-                        <strong className="text-[#141413]">SBTET, Hyderabad</strong>
-                        <p className="text-xs text-neutral-600">Diploma in Computer Science</p>
+                        <strong className="text-[#141413] dark:text-[#F5F5F0]">SBTET, Hyderabad</strong>
+                        <p className="text-xs text-neutral-600 dark:text-neutral-400">Diploma in Computer Science</p>
                       </div>
-                      <span className="text-xs font-bold text-[#996515] bg-[#D4AF37]/15 px-2.5 py-1 rounded-full">
+                      <span className="text-xs font-bold text-[#996515] dark:text-[#F3E5AB] bg-[#D4AF37]/15 px-2.5 py-1 rounded-full">
                         CGPA 9.2 / 10 • May 2025
                       </span>
                     </div>
@@ -133,11 +133,11 @@ export default function ResumeModal({ isOpen, onClose }) {
 
               {/* Work Experience */}
               <div>
-                <h4 className="text-xs font-mono uppercase tracking-widest text-[#996515] font-bold mb-3 flex items-center gap-2">
+                <h4 className="text-xs font-mono uppercase tracking-widest text-[#996515] dark:text-[#E5C158] font-bold mb-3 flex items-center gap-2">
                   <Briefcase className="w-4 h-4 text-[#D4AF37]" />
                   <span>Work Experience</span>
                 </h4>
-                <div className="p-4 rounded-xl bg-white border border-neutral-200 space-y-2">
+                <div className="p-4 rounded-xl bg-white dark:bg-[#181815] border border-neutral-200 dark:border-neutral-800 space-y-2">
                   <div className="flex justify-between items-start">
                     <div>
                       <strong className="text-[#141413]">Frontend AI Engineering Intern</strong>

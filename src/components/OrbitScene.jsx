@@ -121,18 +121,18 @@ export default function OrbitScene() {
           <div className="absolute -inset-8 rounded-full border border-[#D4AF37]/15 animate-pulse" />
 
           {/* Core Sphere */}
-          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#FFFFFF] via-[#FFFDF5] to-[#F5EACB] border-2 border-[#D4AF37] shadow-[0_0_35px_rgba(212,175,55,0.4)] flex flex-col items-center justify-center text-center p-3 group cursor-pointer transition-transform duration-300 hover:scale-105">
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#FFFFFF] via-[#FFFDF5] to-[#F5EACB] dark:from-[#1E1E1B] dark:via-[#141412] dark:to-[#0A0A09] border-2 border-[#D4AF37] shadow-[0_0_35px_rgba(212,175,55,0.4)] flex flex-col items-center justify-center text-center p-3 group cursor-pointer transition-transform duration-300 hover:scale-105">
             {/* Core Icon / Monogram */}
             <div className="w-8 h-8 rounded-full bg-[#141413] flex items-center justify-center text-[#D4AF37] shadow-inner mb-1">
               <Cpu className="w-4 h-4 text-[#D4AF37]" />
             </div>
             <span
-              className="font-cursive text-xl text-[#996515] font-bold leading-tight"
+              className="font-cursive text-xl text-[#996515] dark:text-[#F3E5AB] font-bold leading-tight"
               style={{ fontFamily: "'Great Vibes', cursive" }}
             >
               Arhan
             </span>
-            <span className="text-[9px] font-mono text-[#7D7D75] uppercase tracking-wider">
+            <span className="text-[9px] font-mono text-[#7D7D75] dark:text-[#9E9E95] uppercase tracking-wider">
               Core Node
             </span>
           </div>
@@ -189,16 +189,16 @@ function OrbitingSatellite({ item, isHovered, onHover, onLeave }) {
     >
       <motion.div
         whileHover={{ scale: 1.15 }}
-        className="flex items-center gap-2 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#D4AF37]/50 shadow-[0_4px_15px_rgba(212,175,55,0.2)] hover:border-[#D4AF37] hover:shadow-[0_6px_25px_rgba(212,175,55,0.35)] transition-all"
+        className="flex items-center gap-2 bg-white/95 dark:bg-[#141412]/95 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#D4AF37]/50 shadow-[0_4px_15px_rgba(212,175,55,0.2)] hover:border-[#D4AF37] hover:shadow-[0_6px_25px_rgba(212,175,55,0.35)] transition-all"
       >
         <div className="w-6 h-6 rounded-full bg-[#D4AF37]/15 flex items-center justify-center flex-shrink-0">
           {item.icon}
         </div>
         <div className="flex flex-col text-left">
-          <span className="text-xs font-semibold text-[#141413] whitespace-nowrap">
+          <span className="text-xs font-semibold text-[#141413] dark:text-[#F5F5F0] whitespace-nowrap">
             {item.label}
           </span>
-          <span className="text-[9px] text-[#7A7A72] font-mono whitespace-nowrap hidden sm:inline">
+          <span className="text-[9px] text-[#7A7A72] dark:text-[#9E9E95] font-mono whitespace-nowrap hidden sm:inline">
             {item.sub}
           </span>
         </div>

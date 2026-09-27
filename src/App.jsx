@@ -16,7 +16,7 @@ export default function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#FDFDFB] text-[#141413] selection:bg-[#D4AF37]/25 selection:text-[#141413] font-sans antialiased overflow-x-hidden">
+    <div className="relative min-h-screen bg-[#FDFDFB] dark:bg-[#0A0A09] text-[#141413] dark:text-[#F5F5F0] selection:bg-[#D4AF37]/30 selection:text-current font-sans antialiased overflow-x-hidden transition-colors duration-300">
       {/* 1. Intro Preloader Animation (plays once per session or skippable) */}
       <Preloader onComplete={() => setPreloaderDone(true)} />
 
