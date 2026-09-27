@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #D4AF37;
+    --gold-light: #F3E5AB;
+    --gold-dark: #996515;
+    --gold-accent: #C9A227;
+    --gold-border: rgba(212, 175, 55, 0.25);
+    --gold-glow: rgba(212, 175, 55, 0.15);
+    --bg-main: #FDFDFB;
+    --text-primary: #141413;
+    --text-secondary: #575752;
+    --text-muted: #8C8C85;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  ::selection {
+    background-color: rgba(212, 175, 55, 0.25);
+    color: #141413;
+  }
+}
+
+/* Elegant Cursive Font Class */
+.font-cursive {
+  font-family: 'Great Vibes', cursive, 'Brush Script MT', sans-serif;
+}
+
+.font-script {
+  font-family: 'Alex Brush', cursive, sans-serif;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+}
+
+/* Gold Metallic Text Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #996515 0%, #D4AF37 40%, #E8C15A 50%, #B8860B 80%, #795548 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-shimmer {
+  background: linear-gradient(90deg, #B8860B 0%, #F5D77F 25%, #AA771C 50%, #F5D77F 75%, #B8860B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Subtle Gold Box Shadow */
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.2);
+}
+
+.gold-glow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.35);
+  border-color: rgba(212, 175, 55, 0.55);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E2D4A8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Custom spotlight spotlight overlay */
+.spotlight-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  transition: opacity 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
